@@ -525,20 +525,10 @@ auto    operator*(
     const   auto    num_cols_vector     {input_vector.size()};
 
     // fetching dimension mismatch
-<<<<<<< HEAD
     if (num_cols_matrix != num_cols_vector)
         throw std::runtime_error(
             "FILE: svr_operator_star.hpp | FUNCTION: operator*(input-matrix, complex-vector)"
         );
-=======
-    if (num_cols_matrix != num_cols_vector){
-        cout << format("input_matrix.shape = [{}, {}], input_vector.shape = [{}, {}]\n", num_rows_matrix, num_cols_matrix, 1, num_cols_vector);
-        throw std::runtime_error(
-            "FILE: svr_operator_star.hpp | FUNCTION: operator*(input-matrix, complex-vector)"
-        );
-    }
-        
->>>>>>> 7366761 (Enabled generalised FFTW-plans)
     
     // creating canvas
     auto    canvas      {std::vector<std::vector<std::complex<T>>>(
